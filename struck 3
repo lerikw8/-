@@ -1,0 +1,31 @@
+struct Employee {
+    int id;
+    char name[50];
+    char position[50];
+    float salary;
+    int experience;
+};
+
+int main() {
+    struct Employee employees[5] = {
+        {1, "Alexey", "Programmer", 80000, 3},
+        {2, "Elena", "Manager", 65000, 5},
+        {3, "Dmitry", "Analyst", 90000, 7},
+        {4, "Olga", "Designer", 55000, 2},
+        {5, "Sergey", "Programmer", 75000, 4}
+    };
+
+    return 0;
+}
+//Запрос на сотрудника по ID
+int search_id = 4;
+
+for (int i = 0; i < 5; i++) {
+    if (employees[i].id == search_id) {
+        printf("%s %s %.0f %d\n",
+            employees[i].name,
+            employees[i].position,
+            employees[i].salary,
+            employees[i].experience);
+    }
+}
