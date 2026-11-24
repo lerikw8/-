@@ -1,0 +1,29 @@
+struct Book {
+    int id;
+    char title[100];
+    char author[50];
+    int year;
+    int available;
+};
+int main() {
+    struct Book books[5] = {
+        {1, "War_and_Peace", "Tolstoy", 1869, 1},
+        {2, "Crime_and_Punishment", "Dostoevsky", 1866, 0},
+        {3, "Master_and_Margarita", "Bulgakov", 1967, 1},
+        {4, "Fathers_and_Sons", "Turgenev", 1862, 0},
+        {5, "Eugene_Onegin", "Pushkin", 1833, 1}
+    };
+
+    return 0;
+}
+//Запрос на студента по ID
+int search_id = 3;
+
+for (int i = 0; i < 5; i++) {
+    if (students[i].id == search_id) {
+        printf("%s %d %.1f\n",
+            students[i].name,
+            students[i].age,
+            students[i].average_grade);
+    }
+}
