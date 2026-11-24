@@ -1,0 +1,30 @@
+struct Product {
+    int id;
+    char name[50];
+    float price;
+    int quantity;
+    char category[30];
+};
+
+int main() {
+    struct Product products[5] = {
+        {1, "Laptop", 65000, 5, "Electronics"},
+        {2, "Mouse", 1200, 20, "Accessories"},
+        {3, "Keyboard", 3500, 10, "Accessories"},
+        {4, "Monitor", 18000, 7, "Electronics"},
+        {5, "Headphones", 4500, 15, "Audio"}
+    };
+
+    return 0;
+}
+//Запрос на товар по ID
+int search_id = 3;
+
+for (int i = 0; i < 5; i++) {
+    if (products[i].id == search_id) {
+        printf("%s %.0f %d\n",
+            products[i].name,
+            products[i].price,
+            products[i].quantity);
+    }
+}
