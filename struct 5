@@ -1,0 +1,32 @@
+
+struct Car {
+    int id;
+    char brand[30];
+    char model[30];
+    int year;
+    float mileage;
+};
+
+int main() {
+    struct Car cars[5] = {
+        {1, "Toyota", "Camry", 2020, 45000},
+        {2, "BMW", "X5", 2018, 78000},
+        {3, "Kia", "Rio", 2022, 20000},
+        {4, "Volkswagen", "Polo", 2019, 55000},
+        {5, "Hyundai", "Solaris", 2021, 30000}
+    };
+
+    return 0;
+}
+//Запрос на машину по ID
+int search_id = 2;
+
+for (int i = 0; i < 5; i++) {
+    if (cars[i].id == search_id) {
+        printf("%s %s %d %.0f\n",
+            cars[i].brand,
+            cars[i].model,
+            cars[i].year,
+            cars[i].mileage);
+    }
+}
